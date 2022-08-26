@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    triggers {
+   /* triggers {
       pollSCM '* * * * *'
     }
     stages{
@@ -63,5 +63,13 @@ pipeline{
                echo "deploying to master server...."
             }
         }
+    } **/
+    stages{
+        stage("welcome"){
+            steps{
+                echo 'master branch'
+            }
+        }
     }
+            
 }
